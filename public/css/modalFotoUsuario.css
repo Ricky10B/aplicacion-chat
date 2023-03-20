@@ -1,0 +1,35 @@
+.modalFotoDeUsuario {
+  position: absolute;
+  background-color: black;
+  z-index: 10;
+}
+
+.contenedorFotoDeUsuario img {
+  margin: 0 auto;
+  display: block;
+  transform: scale(1.4);
+  animation: escalaDeImagen ease 1s;
+}
+
+.cerrarModal {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
+.cerrarModal span {
+  background-color: rgb(250, 20, 20);
+  border-radius: 50%;
+  padding: 2px 8px;
+}
+
+@keyframes escalaDeImagen {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}

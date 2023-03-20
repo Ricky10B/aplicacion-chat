@@ -1,0 +1,63 @@
+.notificacionMensaje {
+  display: grid;
+  grid-template-columns: 4em 1fr;
+  grid-template-rows: 4em;
+  gap: 6px;
+  background: var(--color-notificacion-mensaje);
+  cursor: pointer;
+}
+
+.contenedorImagenNotificacion {
+  padding: 6px;
+}
+
+.contenedorImagenNotificacion img {
+  display: block;
+  border-radius: 50%;
+}
+
+.contenedorDatosNotificacion {
+  display: grid;
+  place-content: center start;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+#iconoCampanaNotificacion {
+  position: absolute;
+  font-size: 1.3em;
+  right: 3%;
+  top: 7%;
+  animation: movimientoCampanaNotificacion 0.5s ease-out;
+}
+
+.nombreUsuarioNotificacion {
+  font-size: 1.3em;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mensajeNotificacion {
+  max-width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes movimientoCampanaNotificacion {
+  0% { transform: rotate(0deg); }
+  9% { transform: rotate(30deg); }
+  18% { transform: rotate(0deg); }
+  27% { transform: rotate(-30deg); }
+  36% { transform: rotate(0deg); }
+  45% { transform: rotate(30deg); }
+  54% { transform: rotate(0deg); }
+  63% { transform: rotate(-30deg); }
+  72% { transform: rotate(0deg); }
+  81% { transform: rotate(30deg); }
+  90% { transform: rotate(0deg); }
+  95% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}

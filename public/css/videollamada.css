@@ -1,0 +1,256 @@
+.fondoModal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.contenedorCerrarVideollamada {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.contenedorTextoVideollamada {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-content: center;
+  font-size: 20px;
+  z-index: 1;
+  color: white;
+}
+
+.contenedorVideollamadaLocal {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 50%;
+  transition: 1s;
+}
+
+#llamando {
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  right: 0%;
+}
+
+#videoLlamadaLocal {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+}
+
+.contenedorVideo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.videollamada {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Receptor */
+.videollamandoEntrante {
+  z-index: 100;
+}
+
+.llamadaEntranteYSaliente {
+  padding: 1.3em 1.8em;
+  background: var(--color-app);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.datosUsuarioLlamada {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  margin-bottom: 0.6em;
+}
+
+.datosUsuarioLlamada img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+}
+
+.datosUsuarioLlamada p {
+  max-width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.textoLlamada {
+  font-size: 1.2em;
+  margin: 0.6em 0;
+}
+
+.botonesLlamadas {
+  display: flex;
+  justify-content: center;
+}
+
+.botonesLlamadas button {
+  color: white;
+  outline: none;
+  padding: 0.3em 0.8em;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.botonesLlamadas button:hover {
+  opacity: 0.7;
+}
+
+.colgarLlamada {
+  background: red;
+  border: 2px solid rgb(113, 0, 0);
+  color: white;
+}
+
+.contestarLlamada {
+  background: rgb(0, 180, 0);
+  border: 2px solid rgb(0, 113, 0);
+}
+/* Fin receptor */
+
+.notificacion {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  left: 5%;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 3px 8px 30px black;
+  transform: translateY(-100px);
+  transition: transform 1s;
+}
+
+.contenedorMensajeErrorNotificacion {
+  background-color: rgb(170, 8, 8);
+  border-radius: 10px;
+}
+
+.contenedorMensajeErrorNotificacion p {
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+/* Iconos videollamada */
+.contenedorIconosVideollamada {
+  position: absolute;
+  bottom: 2%;
+  font-size: 2.3em;
+  z-index: 1;
+}
+
+.iconoVideollamada {
+  background: black;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 4px;
+  cursor: pointer;
+}
+
+.btnCerrarVideollamada {
+  background: red;
+  border: none;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 420px) {
+  .notificacion {
+    right: 12%;
+    left: 12%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .contenedorVideollamadaLocal {
+    bottom: 1%;
+    right: 1%;
+    width: 22%;
+    height: 22%;
+    max-width: 100%;
+  }
+
+  .contenedorVideo {
+    height: 100%;
+  }
+
+  .notificacion {
+    right: 15%;
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .notificacion {
+    right: 20%;
+    left: 20%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .notificacion {
+    right: 25%;
+    left: 25%;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .notificacion {
+    right: 30%;
+    left: 30%;
+    max-width: 40%;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .notificacion {
+    right: 35%;
+    left: 35%;
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .notificacion {
+    right: 38%;
+    left: 38%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .notificacion {
+    right: 40%;
+    left: 40%;
+    max-width: 20%;
+  }
+}

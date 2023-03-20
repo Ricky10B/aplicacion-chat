@@ -1,0 +1,33 @@
+.contenedorSpinner {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-content: center;
+}
+
+.contenedorSpinnerFondoOscuro {
+    background: rgba(0,0,0,1);
+}
+
+.contenedorSpinnerFondoClaro {
+    background: rgba(0,0,0,.6);
+}
+
+.spinner {
+    width: 75px;
+    height: 75px;
+    border: 10px solid rgb(17, 201, 234);
+    border-radius: 50%;
+    border-right: 10px solid transparent;
+    animation: rotacionSpinner 1s linear infinite;
+}
+
+@keyframes rotacionSpinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

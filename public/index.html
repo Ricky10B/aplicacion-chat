@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/chatbubbles-outline.ico" type="image/x-icon">
+    <title>Aplicacion de chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="./css/style.css">
+    <link rel="stylesheet" href="./css/temaOscuro.css">
+    <link rel="stylesheet" href="./css/videollamada.css">
+    <link rel="stylesheet" href="./css/modalCrearUsuario.css">
+    <link rel="stylesheet" href="./css/modalFotoUsuario.css">
+    <link rel="stylesheet" href="./css/spinner.css">
+    <link rel="stylesheet" href="./css/notificacion.css">
+    <link rel="stylesheet" href="./css/chatSeleccionado.css">
+  </head>
+  <body>
+    <div class="contenedorSpinner contenedorSpinnerFondoOscuro">
+      <div class="spinner"></div>
+    </div>
+
+    <main>
+      <section class="modalCrearUsuario">
+        <div class="contenedorCrearUsuario">
+          <h2>Crear Usuario</h2>
+          <form id="formCrearUsuario" action="/nuevoUsuario" method="post" enctype="multipart/form-data">
+            <div class="contenedorNombreUsuario">
+              <ion-icon name="person-outline" id="iconoUsuario"></ion-icon>
+              <input type="text" id="inputNombreUsuario" name="usuario" placeholder="Nombre de usuario" maxlength="50" autofocus>
+            </div>
+            <div class="contenedorFotoUsuario">
+              <label class="inputFilePersonalizado">
+                <input type="file" name="foto" id="seleccionarFoto" accept="image/png, image/jpeg, image/jpg">
+                <ion-icon name="attach-outline" id="iconoSubirFoto"></ion-icon>
+                <span class="textoFoto">Seleccionar Foto</span>
+              </label>
+            </div>
+            <div class="contenedorSubmitCrearUsuario">
+              <input type="submit" value="Crear">
+            </div>
+          </form>
+          <div class="contenedorMensajeModalCrearUsuario">
+            <small>Los datos de usuario y mensajes se eliminarán después de 7 días, no se guardan los datos de forma permanente.</small>
+          </div>
+        </div>
+      </section>
+      <aside class="asideChats">
+        <div class="contenedorTemaOscuroClaro">
+          <label class="contentInput">
+            <input type="checkbox">
+            <i></i>
+          </label>
+        </div>
+        <div class="contenedorTituloChats">
+          <h3>Mensajes</h3>
+        </div>
+        <div class="chats"></div>
+      </aside>
+      <section class="sinChatSeleccionado"></section>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/socket.js" ></script>
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/temaOscuro.js"></script>
+    <script type="module" src="./js/enviarMensaje.js"></script>
+  </body>
+</html>

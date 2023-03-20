@@ -1,0 +1,101 @@
+.temaOscuro {
+  --color-app: #06282B /* 062528 */;
+  --color-indicador-nuevo-mensaje: rgb(255, 30, 30);
+  --color-mensaje-remitente: #585a5a;
+  --boton-modo-oscuro-y-envio-mensaje: #0e7d83;
+  --color-menu-opciones: rgb(12, 77, 83);
+  --color-notificacion-mensaje: #155B62;
+  --color-dia-fecha-mensaje: #5B7276;
+  --color-ir-hacia-abajo: black;
+  --color-fondo: #c5c5c5;
+  --color-sin-chat-seleccionado: #12474D /* 104247 */;
+  --color-boton-crear-usuario: #13666F;
+  --color-borde-boton-crear-usuario: #0F4D53;
+  --color-texto-boton-crear-usuario: #E1E1E1;
+  color: #e8e8e8;
+}
+
+body {
+  background-color: var(--color-fondo);
+}
+
+.contenedorTemaOscuroClaro {
+  margin-top: 13px;
+}
+
+.contentInput {
+  position: relative;
+  display: block;
+}
+
+.contentInput input[type="checkbox"] {
+  appearance: none;
+  position: absolute;
+  right: 0;
+}
+
+.contentInput input[type="checkbox"] + i {
+  background: gray;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  margin: 0.3em 0.3em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.contentInput input[type="checkbox"] + i::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.contentInput input[type="checkbox"]:checked + i::before {
+  left: 22px;
+}
+
+.contentInput input[type="checkbox"]:checked + i {
+  background: var(--boton-modo-oscuro-y-envio-mensaje);
+}
+
+.contentInput input[type="checkbox"] + i::after {
+  content: "ON";
+  position: absolute;
+  font-size: 12px;
+  top: 8px;
+  left: 2px;
+  opacity: 0;
+  transition: all 0.25s ease 0.25s;
+}
+
+.contentInput input[type="checkbox"]:checked + i::after {
+  opacity: 1;
+}
+
+@media screen and (min-width: 420px) {
+  .contentInput input[type="checkbox"] + i {
+    left: 22%;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .contentInput input[type="checkbox"] + i {
+    left: 25%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .contentInput input[type="checkbox"] + i {
+    left: 0;
+  }
+}

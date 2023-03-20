@@ -1,0 +1,125 @@
+.modalCrearUsuario {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: grid;
+  place-content: center;
+}
+
+.contenedorCrearUsuario {
+  background-color: var(--color-app);
+  padding: 0.8em 1.4em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px black;
+  font-size: 17px;
+  max-width: 18em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.contenedorCrearUsuario h3 {
+  text-align: center;
+}
+
+#formCrearUsuario {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contenedorNombreUsuario {
+  position: relative;
+}
+
+#iconoUsuario {
+  position: absolute;
+  font-size: 1.1em;
+  top: 12%;
+  left: 1.5%;
+  color: black;
+}
+
+#inputNombreUsuario {
+  font-size: 15px;
+  outline: none;
+  padding: 0.2em 0.1em;
+  padding-left: 1.5em;
+  border-radius: 7px;
+}
+
+.contenedorFotoUsuario {
+  position: relative;
+}
+
+#seleccionarFoto {
+  display: none;
+}
+
+.inputFilePersonalizado {
+  display: block;
+  position: relative;
+  padding: 3px 5px;
+  cursor: pointer;
+  background: grey;
+  color: white;
+  border-radius: 7px;
+}
+
+#iconoSubirFoto {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  font-size: 1.3em;
+  color: white;
+}
+
+.textoFoto {
+  padding-left: 1.3em;
+}
+
+.iconoFotoSubida {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 1.4em;
+  color: rgb(8, 231, 8);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+.contenedorSubmitCrearUsuario {
+  text-align: center;
+}
+
+.contenedorSubmitCrearUsuario input[type="submit"] {
+  background: var(--color-boton-crear-usuario);
+  font-weight: 700;
+  border: 2px solid var(--color-borde-boton-crear-usuario);
+  box-shadow: 2px 5px 10px #000;
+  font-size: 17px;
+  padding: 0.2em 1em;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 3px 0;
+  color: var(--color-texto-boton-crear-usuario);
+}
+
+.contenedorMensajeModalCrearUsuario {
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.mensajeAlertaCrearUsuario {
+  width: 200px;
+  text-align: center;
+  margin: 6px 0;
+  background-color: red;
+  border-radius: 7px;
+  padding: 2px 0;
+  font-size: 14px;
+  color: white;
+}
