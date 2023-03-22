@@ -65,6 +65,8 @@ main {
 }
 
 aside.asideChats {
+  display: flex;
+  flex-direction: column;
   background: var(--color-app);
   height: 100vh;
   position: absolute;
@@ -74,16 +76,16 @@ aside.asideChats {
 
 .contenedorTituloChats {
   text-align: center;
-  margin: 15px 0;
+  margin-bottom: 15px;
   font-size: 25px;
 }
 
 .contenedorTituloChats h3 {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .chats {
-  height: calc(100% - 4.2em);
+  height: 100%;
   overflow: auto;
 }
 

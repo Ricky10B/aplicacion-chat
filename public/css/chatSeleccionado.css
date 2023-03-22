@@ -24,11 +24,15 @@
   cursor: pointer;
 }
 
+.contenedorDatosUsuario {
+  display: grid;
+}
+
 .contenedorDatosUsuario p {
   font-weight: 600;
   font-size: 20px;
   display: block;
-  max-width: 85px;
+  max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -201,19 +205,9 @@ ion-icon[name="send-outline"] {
 }
 
 /* Media queries */
-@media screen and (min-width: 420px) {
-  .contenedorDatosUsuario p {
-    max-width: 220px;
-  }
-}
-
 @media screen and (min-width: 520px) {
   .contenedorChat{
     animation: none;
-  }
-
-  .contenedorDatosUsuario p {
-    max-width: 250px;
   }
 
   .btnDevolver {
